@@ -1,122 +1,312 @@
-.container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer {
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap");
+.navbar {
+  background-color: white;
+  max-width: 1330px;
   width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 10px;
 }
 
-.footer img {
-  margin-left: 0.5rem;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.title a {
-  color: #0070f3;
+.navbar a {
+  padding: 12px;
+  color: gray;
   text-decoration: none;
+  font-size: 17px;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  color: rgb(250, 123, 144);
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+.Logo a {
+  color: #e6087b;
+  text-align: center;
+  text-decoration: none;
+  font-size: 60px;
+  font-family: "Caveat";
+  margin-top: 70px;
 }
 
-.title,
-.description {
+@media screen and (max-width: 500px) {
+  .navbar {
+    max-width: 460px;
+    height: auto;
+  }
+  .Logo {
+    margin-top: 70px;
+  }
+  .Logo a {
+    font-size: 20px;
+  }
+  .car img {
+    width: 100%;
+    border: none;
+  }
+}
+.Logo a:hover {
+  color: black;
+  transition-delay: 0.2s;
+}
+
+.hero {
+  width: 100%;
+  background-size: cover;
+}
+
+.car {
+  margin-bottom: 100px;
+}
+
+.car img {
+  width: 100%;
+  max-height: 500px;
+}
+
+.car a {
+  text-decoration: none;
+  color: gray;
+  background-color: black;
+  width: 100px;
+  padding: 0px 100px 100px 0px;
+}
+.car a:hover {
+  background-color: #e6087b;
+  color: white;
+  border: solid white 5px;
+  border-radius: 10px;
+  transition-delay: 0.1s;
+}
+
+.loremC {
+  background-color: #e6087b;
   text-align: center;
 }
 
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
+.lorem {
+  padding: 100px;
+  color: white;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+.container h2 {
+  text-align: center;
+  font-size: 100px;
+  font-family: "Caveat";
 }
 
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+  margin-left: 50px;
 }
 
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+  margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
 .card {
-  margin: 1rem;
-  flex-basis: 45%;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: black;
+  margin: 10px;
+  border: solid black 5px;
+  border-radius: 15px;
+}
+.price {
+  color: grey;
+  font-size: 22px;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
 }
 
-.card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.card button:hover {
+  opacity: 0.8;
+  color: #e6087b;
+}
+.card img {
+  width: 100%;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-}
-
-@media (max-width: 600px) {
-  .grid {
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
     width: 100%;
-    flex-direction: column;
+    display: block;
+    margin-bottom: 20px;
+    margin-left: 0;
   }
+}
+
+/*/////////////////////////////////////////// FOOTER SECTION////////////////////*/
+.footer {
+  width: 100%;
+  background-color: rgb(226, 221, 221);
+  text-decoration: none;
+}
+
+.footer h3 {
+  font-family: "Antic Slab";
+}
+
+
+.Midia ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.Midia{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(214, 211, 211);
+  margin: 0px 100px 0px 100px;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.Ajuda {
+  background-color: rgb(214, 211, 211);
+  margin: 0px 100px 0px 100px;
+  padding: 10px;
+}
+
+.Ajuda a {
+  text-decoration: none;
+  color: black;
+}
+.Ajuda ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Midia a {
+  text-decoration: none;
+  color: black;
+}
+
+.form {
+  border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+.container_2 input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.Login {
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+/* Set a style for all buttons */
+.Login:hover {
+  opacity: 0.8;
+  background-color: #11b450;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.cancelbtn:hover {
+  background-color: rgb(250, 83, 83);
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container_2 {
+  padding: 16px;
+}
+
+.span a {
+  text-decoration: none;
+  color: #e6087b;
+}
+
+span.psw {
+  margin-top: 10px;
+  float: right;
+  padding-top: 16px;
+}
+
+.Modal_content {
+  background-color: #fefefe;
+  margin: 100px auto;
+  border: 1px solid rgb(219, 216, 216);
+  border-radius: 5px;
+  width: 30%;
+  box-shadow: 5px 10px #eceaea;
+}
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 600px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+  .Modal_content{
+    width: 80%;
+
+  }
+  
+}
+
+.input_loja input{
+  margin-left: 450px;
+  width: 500px;
+  font-size: 30px;
+}
+
+.input_loja button{
+ 
 }
